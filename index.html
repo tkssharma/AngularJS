@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="rideshare">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/ic_launcher.png">
+
+    <title>CODE SCHOOL</title>
+
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   	<link href="css/style.css" rel="stylesheet">
+   
+   
+  </head>
+  <body >
+
+    <!-- Static navbar -->
+	  <!-- header -->
+   <page-header></page-header>
+    <!-- -->
+    <!-- main content will come from routes -->
+    <div>
+    <div ng-view=""></div>
+    </div>
+
+   <!-- footer -->
+   <page-footer></page-footer>
+    <!-- -->
+
+  
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="lib/ie10-viewport-bug-workaround.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <script src="app.js"></script>
+
+    <script src="src/controllers/homePageController.js"></script>
+    <script src="src/controllers/contactController.js"></script>
+    <script src="src/controllers/aboutController.js"></script>
+       <script src="src/controllers/formController.js"></script>
+      <script src="src/controllers/demoController.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+   
+	
+  </body>
+</html>

@@ -1,0 +1,57 @@
+[
+  {
+    "name": "J2SE",
+    "css1"  : "glyphicon glyphicon-briefcase",
+    "img" : "images/services1.png",
+    "alias" :"J2SE-Core-Java",
+    "description": "Java is a set of several computer software and specifications developed by Sun Microsystems, later acquired by Oracle Corporation ",
+    "shine": 8,
+    "price": 110.50,
+    "rarity": 7,
+    "color": "#CCC",
+    "faces": 14,
+    "images": [
+      "images/gem-02.gif",
+      "images/gem-05.gif",
+      "images/gem-09.gif"
+    ],
+    "reviews": []
+  },
+  {
+    "name": "J2EE",
+    "css1"  : "glyphicon glyphicon-send",
+    "img" : "images/services2.png",
+    "alias" :"J2EE-Enterprise-Java",
+    "description": "J2EE is a platform-independent, Java-centric environment from Sun for developing, building and deploying Web-based enterprise applications online",
+    "shine": 9,
+    "price": 22.90,
+    "rarity": 6,
+    "color": "#EEE",
+    "faces": 12,
+    "images": [
+      "images/gem-01.gif",
+      "images/gem-03.gif",
+      "images/gem-04.gif"
+    ],
+    "reviews": []
+  },
+  {
+    "name": "SOA Middleware",
+    "css1"  : "glyphicon glyphicon-random",
+    "alias" :"Web-Service",
+    "img" : "images/services3.png",
+    "description": "Service oriented architecture (SOA) is a method that makes it possible for services to interact with one another independently ",
+    "shine": 70,
+    "price": 1100,
+    "rarity": 2,
+    "color": "#000",
+    "faces": 6,
+    "images": [
+      "images/gem-06.gif",
+      "images/gem-07.gif",
+      "images/gem-08.gif"
+    ],
+    "reviews": []
+  }
+  
+]

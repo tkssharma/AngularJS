@@ -1,0 +1,134 @@
+    
+     <div  ng-app="rideshare" ng-form="rideInfoForm" ng-app="rideshare" ng-controller="formController" >
+    <div class="container theme-showcase" role="main" >
+    
+
+  <div class='container'>
+	<ul id="myTab" class="nav nav-tabs">
+  <li class="active" role="presentation"><a data-toggle="tab" href="#tab1">Add Data</a></li>
+  <li role="presentation"><a data-toggle="tab" href="#tab2">Load data</a></li>
+ 
+  </ul>
+  <div id="dfs" class="tab-content">
+   <div class="tab-pane fade in active" id="tab1">
+      <div class='row well '>
+      <div class='col-md-12'>
+        
+   <!--TAB 1 DATA  -->
+       
+      <div class="page-header">
+        <h1>{{form}}</h1>
+      </div>
+      <div role="alert" class="alert alert-success" ng-show="showSuccessMessage">
+        <strong>Well done!</strong> Ride details saved successfully.
+      </div>
+      <div role="alert" class="alert alert-danger" ng-show="showErrorMessage">
+        <strong>Oh snap!</strong> Please fix the errors below to continue.
+      </div>
+     <div class="row">
+     
+			<div class="form-horizontal col-sm-8">
+			  <div class="form-group" ng-class="{ 'has-error' : rideInfoForm.userName.$invalid && submitted}">
+			    <label for="userName" class="col-sm-4 control-label">Name <span style="color:red;">*</span></label>
+			    <div class="col-sm-8">
+			      <input type="text" class="form-control" name="userName" ng-model="rideInfo.userName" id="userName" ng-required="true">
+			    </div>
+			  </div>
+			  <div class="form-group" ng-class="{ 'has-error' : rideInfoForm.phoneNumber.$invalid && submitted}">
+			    <label for="phoneNumber" class="col-sm-4 control-label">Phone Number <span style="color:red;">*</span></label>
+			    <div class="col-sm-8">
+			      <input type="text" class="form-control" name="phoneNumber" ng-model="rideInfo.phoneNumber" id="phoneNumber" ng-required = "true">
+			    </div>
+			  </div>
+			  <div class="form-group" ng-class="{ 'has-error' : rideInfoForm.drop.$invalid && submitted}">
+			    <label for="Source" class="col-sm-4 control-label">Source <span style="color:red;">*</span></label>
+			    <div class="col-sm-8">
+			    	<select id="drop" name="drop" ng-model="rideInfo.drop" class="form-control" ng-options="pick for pick in picks" ng-required="true">
+			    		
+			    	</select>
+			    </div>
+			  </div>
+
+			    <div class="form-group" ng-class="{ 'has-error' : rideInfoForm.pickup.$invalid && submitted}">
+			    <label for="Source" class="col-sm-4 control-label">Source <span style="color:red;">*</span></label>
+			    <div class="col-sm-8">
+			    	<select id="drop" name="pickup" ng-model="rideInfo.pickup" class="form-control" ng-options="drop for drop in drops" ng-required="true">
+			    		
+			    	</select>
+			    </div>
+			  </div>
+			
+		
+			  <div class="form-group">
+			    <div class="col-sm-offset-4 col-sm-8">
+			      <a href="" ng-click="addRide()" class="btn btn-primary">Save</a>
+			      <a href="#/" class="btn btn-default">Cancel</a>
+			      
+			    </div>
+			  </div>
+			</form>
+		</div>
+	</div>
+
+	
+
+
+      </div>
+      
+    </div>
+   </div>
+
+
+   <div class="tab-pane fade in active" id="tab2">
+      <div class='row well '>
+      <div class='col-md-12'>
+        
+    
+
+
+
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">load saved data</button>
+		<!-- load model -->
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><h1>{{form1}}</h1></h4>
+        
+      </div>
+      <div class="modal-body" >
+      	<div ng-repeat="data in saveddata">
+       <!-- showing data in table  -->
+
+       <table class="table stripped" >
+       	<tr>{{data.name}}<td></td> {{data.description}}<td></td><td>{{data.alias}}</td> </tr>
+       </table>
+
+       </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      
+    </div>
+   </div>
+   
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+ 

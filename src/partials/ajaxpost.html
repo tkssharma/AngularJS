@@ -1,0 +1,33 @@
+<div class="container">
+
+<div class="well"  ng-app="rideshare" ng-controller="demoController as demoCntl">
+		<h4>Demo Ajax post</h4>
+    
+
+    <div id="messages" ng-show="message">{{ message }}</div>
+
+<!-- FORM --> 
+<form class="form-horizontal col-md-6" ng-submit="processForm()"> 
+  <!-- NAME --> 
+  <div id="name-group" class="form-group" ng-class="{ 'has-error' : errorName }"> 
+    <label>Name</label> 
+    <input type="text" name="name" class="form-control" placeholder="...." ng-required="true"> 
+    <span class="help-block" ng-show="errorName">{{ errorName }}</span> 
+  </div>
+
+  <!-- SUPERHERO NAME -->
+  <div id="superhero-group" class="form-group" ng-class="{ 'has-error' : errorSuperhero }"> 
+      <label>password</label> 
+      <input type="text" name="superheroAlias" class="form-control" placeholder="...." ng-required="true"> 
+      <span class="help-block" ng-show="errorSuperhero">{{ errorSuperhero }}</span> 
+  </div>
+
+  <!-- SUBMIT BUTTON -->
+  <button type="submit" class="btn btn-success btn-lg btn-block">
+      <span class="glyphicon glyphicon-flash"></span> Submit!
+  </button>
+</form>
+  </div>
+
+
+</div>

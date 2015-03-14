@@ -1,0 +1,25 @@
+
+  <div class='container' ng-app="rideshare" ng-controller="homePageController as homeCntl">
+    <div class='row well well-lg'>
+      <div class='col-md-6'>
+        <h2>MVC in Angular</h2>
+        <p class='lead'>Make your way to space in our rocket, elevator or transporter for Jquery</p>
+        <button type='button' class='btn btn-lg btn-default'>Take the Tour</button>
+        <button type='button' class='btn btn-lg btn-primary'>Book Training</button>
+      </div>
+      <div class='col-md-6 visible-md visible-lg'>
+        <img src='images/right-bg.jpg' alt='Blast off with Bootstrap' />
+      </div>
+    </div>
+    <div class='row text-center features' >
+      <div ng-repeat="techdata in homeCntl.technologies"
+      <div class='col-sm-4 col-xs-6'>
+        <i class="{{techdata.css1}}"></i>
+        <h3>{{techdata.name}}</h3>
+        <p>{{techdata.description}}</p>
+      </div>
+    </div>
+
+     
+    </div>
+ 
